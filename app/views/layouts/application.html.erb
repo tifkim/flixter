@@ -28,7 +28,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-                <li><%= link_to 'A user is signed in!', destroy_user_session_path, :method => delete %></li>
+                <li><%= link_to 'Log out', destroy_user_session_path %></li>
               <% else %>
               <li><%= link_to 'Sign in', new_user_session_path %></li>
               <li><%= link_to 'Sign up', new_user_registration_path %></li>
@@ -52,9 +52,9 @@
 
   <div id="footer">
     <div class="container">
-      <b>FOOTER</b>
+      <b>Teachers</b>
       <br/>
-      <%= link_to 'Link', '#' %>
+      <%= link_to 'Teach a Course', new_instructor_course_path %>
     </div>
   </div>
 
