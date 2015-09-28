@@ -13,7 +13,10 @@ class Instructor::LessonsController < ApplicationController
     end
 
     def update
-      current_lesson.update_attributes(lesson_params)
+      cl = Lesson.find(params[:id])
+      # current_lesson.
+      binding.pry
+      cl.update_attributes(lesson_params)
       render :text => 'updated!'
     end
 
