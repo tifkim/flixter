@@ -17,5 +17,5 @@ class Instructor::CoursesControllerTest < ActionController::TestCase
     assert_redirected_to instructor_course_path(Course.last)
     assert_equal 1, user.courses.count
   end
-  
+
 end
