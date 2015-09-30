@@ -14,9 +14,11 @@
 
     <% if current_user && current_user.enrolled_in?(@course) %>
       <h3 class="label label-info">You Are Enrolled!</h3>
+      <br />
     <% else %>
       <% if @course.free? %>
         <%= link_to 'Enroll', course_enrollments_path(@course), :class => 'btn btn-primary', :method => :post %>
+        <br />
       <% else %>
         <%= form_tag course_enrollments_path(@course) do %>
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
